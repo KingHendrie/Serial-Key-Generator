@@ -1,0 +1,80 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <form method="post">
+                        <div class="container">
+                            <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <label>Company Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" asp-for="CompanyName" />
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <label>App Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" asp-for="AppName" />
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <label>Creation Date</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="date" class="form-control" asp-for="CreationDate" />
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <label>Expiration Date</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="date" class="form-control" asp-for="ExpirationDate" />
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <button type="submit" asp-page-handler="Generate" class="btn btn-primary">Generate Key</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <form method="post">
+                        <div class="container">
+                            <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <label>Key</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" asp-for="Key" />
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <button type="submit" asp-page-handler="Decrypt" class="btn btn-primary">Decrypt Key</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
